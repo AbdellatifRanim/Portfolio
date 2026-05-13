@@ -81,8 +81,14 @@ if (toggleBtn) {
  window.addEventListener("load", () => {
   const video = document.querySelector(".back-vid");
   if (video) {
+    video.muted = true;
+    video.playsInline = true;
     video.load();
-    video.play();
+    video.play().catch((error) => {
+      console.warn('Background video playback interrupted:', error);
+      // Le navigateur peut arrêter la vidéo en économie d'énergie.
+      // On ignore l'erreur pour ne pas laisser une promesse non gérée.
+    });
   }
 });
 // lancer au démarrage
