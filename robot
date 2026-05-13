@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://AbdellatifRanim.github.io/portfolio/sitemap.xml
+Sitemap: https://abdellatifranim.github.io/Portfolio/sitemap.xml
